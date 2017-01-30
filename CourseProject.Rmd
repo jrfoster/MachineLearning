@@ -191,7 +191,7 @@ kable(table, digits=5, col.names=c("Model","Validation Accuracy", "Out-Of-Sample
 
 ```
 
-Based on the information above, like [@Velloso1], we can see that the Random Forest model is the most accurate. We show below the decision tree of the final model.
+Based on the information above, like [@Velloso1], we can see that the Random Forest model is the most accurate. We show below the decision tree of the final model.   The estimated out-of-sample error for the Random Forest Model is `r 1 - rfConfusion$overall[1]`, which is based on 10-fold cross validation (see model generation functions in the Appendix)
 
 
 Finally, we apply this to the test data provided in the assignment to generate final predictions. A couple of notes for the reviewer, the custom function we used to load the training data will have downloaded the test set along with the training set and has made it available in a file named pml-testing.csv in the data directory. We use the same data directory, read the file and predict the outcomes using our Random Forest model.
